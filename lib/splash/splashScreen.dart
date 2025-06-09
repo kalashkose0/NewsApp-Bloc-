@@ -1,54 +1,39 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:newsapp/Screens/loginPage.dart';
-import 'package:newsapp/Screens/homePage.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:newsapp/routes/appRoutes.dart';
 
-class Splashscreen extends StatefulWidget {
-  const Splashscreen({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<Splashscreen> createState() => _SplashscreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashscreenState extends State<Splashscreen> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () async {
-      SharedPreferences prefs = await SharedPreferences.getInstance();
-      bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
-
-      if (isLoggedIn) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const HomePage()),
-        );
-      } else {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => const LoginPage()),
-        );
-      }
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacementNamed(context, AppRoutes.routeOnboarding);
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Icon(
-              Icons.newspaper,
-              size: 100,
-              color: Colors.blue,
+    return SafeArea(
+      child: Scaffold(
+        body:
+            Stack(alignment: Alignment.center, fit: StackFit.expand, children: [
+          Container(
+            color: Colors.white,
+          ),
+          Center(
+            child: Image.asset(
+              'assets/images/text.png',
+              height: 200,
+              width: 200,
             ),
-            SizedBox(height: 40),
-            CircularProgressIndicator(color: Colors.blue),
-          ],
-        ),
+          ),
+        ]),
       ),
     );
   }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/Screens/News/newsPage.dart';
-import 'package:newsapp/Screens/bookmarkPage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -13,8 +11,8 @@ class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
 
   final pages = [
-    NewsPage(),
-    BookmarksPage(),
+    // NewsPage(),
+    // BookmarksPage(),
   ];
 
   @override

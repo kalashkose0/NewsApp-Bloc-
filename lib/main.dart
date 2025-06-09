@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newsapp/routes/appRoutes.dart';
 import 'package:newsapp/splash/splashScreen.dart';
 
 void main() {
@@ -14,13 +15,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'News App',
-      theme: ThemeData.light().copyWith(
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.blue,
-          foregroundColor: Colors.white,
-        ),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-      home: const Splashscreen(),
+      initialRoute: AppRoutes.routeSplash,
+      routes: AppRoutes.getRoutes(),
     );
   }
 }
