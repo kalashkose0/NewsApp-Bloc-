@@ -1,33 +1,34 @@
-import 'package:flutter/material.dart';
+// import 'dart:async';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+// import 'package:flutter/material.dart';
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
+// class HomePage extends StatefulWidget {
+//   const HomePage({super.key});
 
-class _HomePageState extends State<HomePage> {
-  int currentIndex = 0;
+//   @override
+//   State<HomePage> createState() => _HomePageState();
+// }
 
-  final pages = [
-    // NewsPage(),
-    // BookmarksPage(),
-  ];
+// class _HomePageState extends State<HomePage> {
+//   String _selectedTrendingCategory = 'bussiness';
+//   final TextEditingController _controller = TextEditingController();
+//   final PageController _pageController = PageController();
+//   int _currentPage = 0;
+//   Timer? _pageTimer;
+//   final Debouncer _debouncer = Debouncer(milliseconds: 500);
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: pages[currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: (index) => setState(() => currentIndex = index),
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.article), label: 'News'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.bookmark), label: 'Bookmarks'),
-        ],
-      ),
-    );
-  }
-}
+//   final List<String> _trendingCategories = [
+//     'business',
+//     'entertainment',
+//     'general',
+//     'health',
+//     'science',
+//     'sports',
+//     'technology',
+//   ];
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold();
+//   }
+// }
