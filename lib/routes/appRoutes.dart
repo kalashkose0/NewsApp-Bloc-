@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/Screens/bottomNavigationBar.dart';
-import 'package:newsapp/Screens/homePage.dart';
-import 'package:newsapp/Screens/onbordingScreen.dart';
+import 'package:newsapp/Screens/bottomNavigation/bottomNavigationBar.dart';
+import 'package:newsapp/Screens/homeScreen/homePage.dart';
+import 'package:newsapp/Screens/OnBoardingScreen/onbordingScreen.dart';
 import 'package:newsapp/splash/splashScreen.dart';
 
 class AppRoutes {

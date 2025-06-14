@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/Screens/exploreScreen.dart';
+import 'package:newsapp/Screens/exploreScreen/exploreScreen.dart';
 import 'package:newsapp/Screens/savedScreen.dart';
 import 'package:newsapp/Screens/settingScreen.dart';
 
