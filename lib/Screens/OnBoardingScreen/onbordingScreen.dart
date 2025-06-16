@@ -50,6 +50,7 @@ class OnboardingScreen extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
+                  // Subtitle
                   "Hear, see, watch something in the world using Tidings and share it with your family or friend.",
                   style: TextStyle(color: Colors.white70, fontSize: 14),
                 ),
