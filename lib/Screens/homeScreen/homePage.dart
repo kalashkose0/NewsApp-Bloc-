@@ -1,34 +1,22 @@
-// import 'dart:async';
+import 'package:flutter/material.dart';
 
-// import 'package:flutter/material.dart';
+class Homepage extends StatefulWidget {
+  const Homepage({super.key});
 
-// class HomePage extends StatefulWidget {
-//   const HomePage({super.key});
+  @override
+  State<Homepage> createState() => _HomepageState();
+}
 
-//   @override
-//   State<HomePage> createState() => _HomePageState();
-// }
-
-// class _HomePageState extends State<HomePage> {
-//   String _selectedTrendingCategory = 'bussiness';
-//   final TextEditingController _controller = TextEditingController();
-//   final PageController _pageController = PageController();
-//   int _currentPage = 0;
-//   Timer? _pageTimer;
-//   final Debouncer _debouncer = Debouncer(milliseconds: 500);
-
-//   final List<String> _trendingCategories = [
-//     'business',
-//     'entertainment',
-//     'general',
-//     'health',
-//     'science',
-//     'sports',
-//     'technology',
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold();
-//   }
-// }
+class _HomepageState extends State<Homepage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Text(
+          'Home Page',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
+  }
+}

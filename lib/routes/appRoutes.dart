@@ -13,8 +13,8 @@ class AppRoutes {
 
   static Map<String, WidgetBuilder> getRoutes() => {
         routeSplash: (context) => SplashScreen(),
-        // routeHome: (context) => HomePage(),
-        routeDetails: (context) => NewsDetailScreen(),
+        routeHome: (context) => Homepage(),
+        // routeDetails: (context) => NewsDetailScreen(),
         routeOnboarding: (context) => OnboardingScreen(),
         routeBottamNavigation: (context) => BottomNavigationScreen(),
       };
