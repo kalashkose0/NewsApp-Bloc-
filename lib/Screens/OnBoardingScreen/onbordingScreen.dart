@@ -27,7 +27,7 @@ class OnboardingScreen extends StatelessWidget {
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                       color: Colors.white,
-                      height: 1.4,
+                      height: 1.4
                     ),
                     children: [
                       TextSpan(
